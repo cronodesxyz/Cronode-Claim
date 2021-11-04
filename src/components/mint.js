@@ -23,7 +23,7 @@ export const BuyForm = () => {
     return (
         <div>
 
-            <a onClick={handleBuySubmit} _ngcontent-ivp-c18="" className="button-14-copy w-button">MINT</a>
+            <a onClick={handleBuySubmit} _ngcontent-ivp-c18="" href="#header" className="button-14-copy w-button">MINT</a>
         </div>
     )
 
