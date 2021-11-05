@@ -16,7 +16,7 @@ export const Balance = () => {
     return (
 
 
-        <div id="main">
+        <div >
              <h1 _ngcontent-ivp-c18=""   className="heading-78-copy-copy">/10000</h1>
 
         </div>
