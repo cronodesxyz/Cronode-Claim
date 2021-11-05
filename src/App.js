@@ -2,7 +2,7 @@ import './css/styles.css';
 import './css/App.css';
 import {Wallet} from "./components/wallet";
 import {BuyForm} from "./components/mint";
-import {Balance} from "./components/balance"
+
 
 function App() {
   return (

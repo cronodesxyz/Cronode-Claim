@@ -1,11 +1,6 @@
-import { useEtherBalance, useEthers} from '@usedapp/core'
-import { formatEther } from '@ethersproject/units'
-import { CONTRACT_ADDRESS, CONTRACT_API} from '../config'
-import Web3 from "web3"
-
 
 export const Balance = () => {
-    const etherBalance = useEtherBalance(CONTRACT_ADDRESS)
+
 
     const main = document.getElementById("main");
 
