@@ -7,6 +7,7 @@ export const Wallet = () => {
 
     const handleActiveSubmit = () => {
         activateBrowserWallet()
+
     }
 
 
