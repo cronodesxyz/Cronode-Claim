@@ -55,3 +55,39 @@ const totalsupply = fetch("https://deep-index.moralis.io/api/v2/nft/0x6aD4Ff63fD
 totalsupply.then((response) => {return response.json();}).then((total) => {const value = total.total; main.innerHTML = value;});
 
   </script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+</script>
+
+<script>
+$( document ).ready(function() {
+
+$(".qty-adj").on("click", function() {
+
+  var $button = $(this),
+  $input = $button.closest('.lilhustlaz-quantity').find("span");
+  var oldValue = $input.text(),
+    newVal;
+
+  if ($.trim($button.text()) == "+") {
+    // Don't allow incrementing above ten
+    if (oldValue < 10) {
+      newVal = parseFloat(oldValue) + 1;
+    } else {
+      newVal = 10;
+    }
+  } else {
+    // Don't allow decrementing below zero
+    if (oldValue > 0) {
+      newVal = parseFloat(oldValue) - 1;
+    } else {
+      newVal = 0;
+    }
+  }
+
+  $input.text(newVal);
+});
+});
+</script>

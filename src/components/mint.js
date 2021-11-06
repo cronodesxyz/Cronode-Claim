@@ -4,24 +4,28 @@ import Web3 from "web3"
 import { useEthers } from '@usedapp/core'
 
 
+
 export const BuyForm = () => {
 
     const {account} = useEthers()
     const web3 = new Web3(Web3.givenProvider)
     const contract = new web3.eth.Contract(CONTRACT_API, CONTRACT_ADDRESS)
 
-    const handleBuySubmit = async () => {
 
+    const handleBuySubmit = async () => {
+        const htmlamount = document.getElementById('number').innerHTML;
+        console.log(htmlamount)
         contract.setProvider(web3.givenProvider)
-        const amountInEther = .07
+        const amountInEther = .07 * htmlamount
         const transactionValue = utils.parseUnits(amountInEther.toString())
 
-        return contract.methods.mintLilHustlaz(1).send({from: account, value: transactionValue})
+        return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: transactionValue})
 
     }
 
     return (
         <div>
+        <h1 _ngcontent-ivp-c18=""  className="heading-78 lilhustlaz-quantity"><button _ngcontent-ivp-c18="" className="qty-adj minus">-</button> <span  type="num" id="number" className="qty">1</span> <button _ngcontent-ivp-c18="" className="qty-adj plus">+</button></h1>
 
             <a onClick={handleBuySubmit} _ngcontent-ivp-c18="" href="#header" className="button-14-copy w-button">MINT</a>
         </div>

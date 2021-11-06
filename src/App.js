@@ -23,7 +23,6 @@ function App() {
                 <h1 _ngcontent-ivp-c18="" className="heading-78-copy">mint a hustla</h1>
 
                     <h1 _ngcontent-ivp-c18="" className="heading-78-copy-copy">Select how many you would like to mint!</h1>
-                    <h1 _ngcontent-ivp-c18="" className="heading-78"><button _ngcontent-ivp-c18="" className="minus">-</button> 1 <button _ngcontent-ivp-c18="" className="plus">+</button></h1>
                     <BuyForm/></div><router-outlet _ngcontent-ivp-c18=""></router-outlet></app-root>
 
             </div>
