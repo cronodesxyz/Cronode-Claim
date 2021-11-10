@@ -13,14 +13,17 @@ export const BuyForm = () => {
 
 
     const handleBuySubmit = async () => {
-        const htmlamount = document.getElementById('number').innerHTML;
-        console.log(htmlamount)
-        contract.setProvider(web3.givenProvider)
-        const amountInEther = .07 * htmlamount
-        const transactionValue = utils.parseUnits(amountInEther.toString())
+        if (account) {
+            const htmlamount = document.getElementById('number').innerHTML;
 
-        return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: transactionValue})
+            contract.setProvider(web3.givenProvider)
+            const amountInEther = .07 * htmlamount
+            const transactionValue = utils.parseUnits(amountInEther.toString())
 
+            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: transactionValue})
+        } else {
+            alert("Not connected")
+        }
     }
 
     return (
