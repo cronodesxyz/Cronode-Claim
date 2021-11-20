@@ -1,4 +1,3 @@
-import {utils} from "ethers"
 import {CONTRACT_ADDRESS, CONTRACT_API} from "../config"
 import Web3 from "web3"
 import { useEthers } from '@usedapp/core'
@@ -13,15 +12,16 @@ export const BuyForm = () => {
 
 
     const handleBuySubmit = async () => {
-        if (account) {
+        if(account){
+            var amount = await contract.methods.price().call()
             const htmlamount = document.getElementById('number').innerHTML;
 
             contract.setProvider(web3.givenProvider)
-            const amountInEther = .07 * htmlamount
-            const transactionValue = utils.parseUnits(amountInEther.toString())
+            const amountInEther = amount * htmlamount
 
-            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: transactionValue})
-        } else {
+
+            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther})
+            }else {
             alert("Not connected")
         }
     }
