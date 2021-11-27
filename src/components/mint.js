@@ -20,7 +20,7 @@ export const BuyForm = () => {
             const amountInEther = amount * htmlamount
 
 
-            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther})
+            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther, gas: 120000})
             }else {
             alert("Not connected")
         }
