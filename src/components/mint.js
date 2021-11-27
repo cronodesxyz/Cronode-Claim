@@ -18,9 +18,10 @@ export const BuyForm = () => {
 
             contract.setProvider(web3.givenProvider)
             const amountInEther = amount * htmlamount
+            const baseGasFee = htmlamount * 200000
 
 
-            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther, gas: 300000})
+            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther, gas: baseGasFee})
             }else {
             alert("Not connected")
         }
