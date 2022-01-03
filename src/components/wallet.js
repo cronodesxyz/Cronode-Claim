@@ -24,11 +24,11 @@ export const Wallet = () => {
         <div className="mintButton">
           {isConnected ? (
                     <button  className="button-14-copy" href="#header" onClick={deactivate}>
-                        disconnect
+                        Disconnect
                     </button>
                     ) : (
                         <button  className="button-14-copy" href="#header" onClick={handleActiveSubmit}>
-                        connect
+                        Connect
                         </button>
                     )
                 }

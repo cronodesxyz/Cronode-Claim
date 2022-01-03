@@ -31,7 +31,7 @@ export const BuyForm = () => {
         <div>
         <h1 _ngcontent-ivp-c18=""  className="heading-78 lilhustlaz-quantity"><button _ngcontent-ivp-c18="" className="qty-adj minus">-</button> <span  type="num" id="number" className="qty">1</span> <button _ngcontent-ivp-c18="" className="qty-adj plus">+</button></h1>
 
-            <a onClick={handleBuySubmit} _ngcontent-ivp-c18="" href="#header" className="button-14-copy w-button">MINT</a>
+            <a onClick={handleBuySubmit} _ngcontent-ivp-c18="" href="#header" className="button-14-copy mint-button">Mint</a>
         </div>
     )
 

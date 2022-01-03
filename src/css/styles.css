@@ -115,6 +115,15 @@ button.plus {
 }
 .mintButton {
     position: relative;
-    left: 200px;
+    left: 0px;
     down: 600px;
+    padding: 10px;
+}
+
+.mint-button {
+    text-decoration: none;
+}
+
+.logo-image {
+    padding-bottom: 5px;
 }
