@@ -18,7 +18,7 @@ export const BuyForm = () => {
 
             contract.setProvider(web3.givenProvider)
             const amountInEther = amount * htmlamount
-            const baseGasFee = (htmlamount - 1) * 100000 + 200000
+            const baseGasFee = (htmlamount - 1) * 125000 + 200000
 
 
             return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther, gas: baseGasFee})
