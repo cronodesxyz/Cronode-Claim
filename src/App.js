@@ -2,7 +2,7 @@ import './css/styles.css';
 import './css/App.css';
 import {Wallet} from "./components/wallet";
 import {BuyForm} from "./components/mint";
-import logo from "./assets/blackLogo.png";
+import logo from "./assets/small-logo.png";
 
 
 function App() {
