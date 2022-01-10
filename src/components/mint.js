@@ -13,15 +13,10 @@ export const BuyForm = () => {
 
     const handleBuySubmit = async () => {
         if(account){
-            var amount = await contract.methods.price().call()
-            const htmlamount = document.getElementById('number').innerHTML;
-
-            contract.setProvider(web3.givenProvider)
-            const amountInEther = amount * htmlamount
-            const baseGasFee = (htmlamount - 1) * 125000 + 200000
 
 
-            return contract.methods.mintLilHustlaz(htmlamount).send({from: account, value: amountInEther, gas: baseGasFee})
+
+            return contract.methods.claim().send({from: account})
             }else {
             alert("Not connected")
         }
@@ -29,9 +24,9 @@ export const BuyForm = () => {
 
     return (
         <div>
-        <h1 _ngcontent-ivp-c18=""  className="heading-78 lilhustlaz-quantity"><button _ngcontent-ivp-c18="" className="qty-adj minus">-</button> <span  type="num" id="number" className="qty">1</span> <button _ngcontent-ivp-c18="" className="qty-adj plus">+</button></h1>
 
-            <a onClick={handleBuySubmit} _ngcontent-ivp-c18="" href="#header" className="button-14-copy mint-button">Mint</a>
+
+            <button onClick={handleBuySubmit} href="#header" className="claim-button">Claim</button>
         </div>
     )
 
