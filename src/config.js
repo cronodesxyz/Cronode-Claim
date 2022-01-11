@@ -1,6 +1,6 @@
-export const INFURA_LINK = "https://mainnet.infura.io/v3/2207143b2f5c4866a25cc7e202920a0f"
 
-export const CONTRACT_ADDRESS = "0xbfBcb01F093358619a533bdfB751dCF85000EF76"
+
+export const CONTRACT_ADDRESS = "0x82d558524715985d443F918e3E60761224d0B00A"
 
 export const CONTRACT_API = [
 	{

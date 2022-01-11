@@ -7,7 +7,7 @@ import { DAppProvider} from '@usedapp/core';
 
 
 ReactDOM.render(
-  <DAppProvider config={{supportedChains: [338]}}>
+  <DAppProvider config={{supportedChains: [25]}}>
     <App />
   </DAppProvider>,
   document.getElementById('root')
